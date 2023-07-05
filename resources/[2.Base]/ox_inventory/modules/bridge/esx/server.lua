@@ -49,7 +49,7 @@ server.accounts.black_money = 0
 function server.setPlayerData(player)
 	local groups = {
 		[player.job.name] = player.job.grade,
-		[player.faction.name] = player.faction.grade
+		[player[ESX.GetConfig().DoubleJob.name]] = player[ESX.GetConfig().DoubleJob.grade]
 	}
 
 	return {
